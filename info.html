@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <title>Anthony Ly Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght$100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="info">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img class="logo" src="portraits/mainsubject.png" alt="Anthony Ly">
+                <span class="brand-name">Anthony Ly</span>
+            </a>
+            <i class="fa-solid fa-bars" id="menuBtn" aria-label="Open menu" aria-expanded="false"></i>
+            <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+                <div class="mobile-menu-inner">
+                    <div class="mobile-group">
+                        <a href="index.html#proj-art">Art Portfolio</a>
+                        <a href="index.html#proj-python">Python TFD</a>
+                        <a href="index.html#interest">Interest</a>
+                        <a href="info.html">Info</a>
+                        <a href="">Resume</a>
+                        <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                        <a href="https://github.com/anly002">GitHub</a>
+                    </div>
+                </div>
+            </nav>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="dropdown">
+                    <button class="menu-trigger" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="darkgray" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <ul class="menu" role="menu">
+                        <li role="none"><a role="menuitem" href="index.html#proj-art">Art Portfolio</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#proj-python">Python TFD</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#interest">Interest</a></li>
+                    </ul>
+                </div>
+                <a href="info.html">Info</a>
+            </nav>
+            <nav class="social-nav" aria-label="External">
+                <a href="">Resume</a>
+                <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                <a href="https://github.com/anly002">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <section id="info-art" class="info-section">
+        <div class="container info-grid">
+            <div class="info-media">
+                <video src="vids/arttimelapse.mp4" class="info-view" autoplay muted loop playsinline></video>
+            </div>
+            <div class="info-copy">
+                <h2 id="info-art-title" class="hero-title">The Beginning</h2>
+                <p class="info-lead">
+                    When I first entered college, I was uncertain about the direction I wanted to take and had not yet discovered a passion beyond playing video games.
+                    At the time, the only consistent source of enjoyment I found outside of gaming was anime, and I often felt relaxed and at peace when drawing characters from my favorite anime shows.
+                    This interest led me to pursue digital art and declare Art as my major at community college. I enrolled in the required course and gradually developed a recognizable style that became evident across my drawings.
+                    Although I am happy with the style I developed, I often struggled with anatomy. Without references, I found it difficult to accurately capture the human form, and while using references is common practice,
+                    I felt it lessened the enjoyment of the creative process for me. Challenges such as shading, lighting, and designing backgrounds added to the difficulty.<br><br>This one particular timelapse drawing shown, however,
+                    remains one of my favorite pieces. Unlike many of the other works, I felt genuinely satisfied with the outcome. I even managed to create a background-something I rarely attempted to due in my inexperience-which made
+                    me especially proud. I remember relying on numerous references for thsi piece, and it became one of the most time-consuming projects I had ever completed. Despite the progres I could see in my work, I often felt
+                    I was not advancing to the level I wanted. As a result, I draw less frequently anad instead turned back to gaming, which at the time had became an addictive escape.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="info-web" class="info-section alt">
+        <div class="container info-grid">
+            <div class="info-copy">
+                <h2 id="info-web-title" class="hero-title">Current</h2>
+                <p class="info-lead">
+                    During my time in community college, my passion for gaming led me to build my own computer. I had prior experience assembling two systems, one many years earlier and another for my cousin-so while I had some familarity,
+                    this was the first time approaching the process with greater independence. After building my PC and conducting the necessary research, I became fascinated by the technology and the intricate ways in which computers function.
+                    This experience sparked a genuine curiosity in me, and within a year I built another, more advanced system-this tie with significantly more knowledge, though admittedly at a higher cost. Although I may have spent way too much
+                    on my current setup, I am satisfied with the result.<br><br>While still pursuing an Art major at community college with plans to trasnfer to a univesity, my growing interest in computers inspired me to learn more about hardware
+                    and technology. Upon being accepted to the University of California, San Diego, I considered switching my major to computer engineering; however, with only two years remaining, it was not a practical option. Instead, I committed
+                    to teaching myself. I began learning programming both through self-study and by enrolling in coding classes, which gradually introduced me to web design. Initially, I experimented with Figma for design work, but I found its learning
+                    cruve challenging. As a result, I transitioned to coding my projects directly, which allowed me to combine creativity with technical skills. Over time, I have grown passionate about web development, and with my courseowrk databases,
+                    I became motivated to pursue full-stack development with the goal of mastering the entire process.
+                </p>
+            </div>
+            <div class="info-media">
+                <img src="images/webdevimg.jpg" alt="Web Dev UI preview" class="info-image">
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" id="contact">
+        <div class="container footer-main">
+            <div class="footer-left">
+                <div class="footer-visual-wrap">
+                    <img src="images/casefan.png" alt="PC case fan" class="footer-visual">
+                    <img src="images/casefan.png" alt="" class="fan-spin" aria-hidden="true">
+                    <div class="fan-center"></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="bg-blob blob-pink" aria-hidden="true"></div>
+                <div class="bg-blob blob-cyan" aria-hidden="true"></div>
+                <h1 class="footer-title">Let's Spin<br>Together!</h1>
+                <a href="mailto:anthonyly42@gmail.com" class="btn-email"><span>Email <i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copy">Copyright © <span id="year"></span> Anthony Ly. All rights reserved.</p>
+            <nav class="footer-social" aria-label="Social links">
+                <a href="http://linkedin.com/in/anyly" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/anly002" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_an_yly?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <title>Anthony Ly Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght$100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img class="logo" src="portraits/mainsubject.png" alt="Anthony Ly">
+                <span class="brand-name">Anthony Ly</span>
+            </a>
+            <i class="fa-solid fa-bars" id="menuBtn" aria-label="Open menu" aria-expanded="false"></i>
+            <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+                <div class="mobile-menu-inner">
+                    <div class="mobile-group">
+                        <a href="index.html#proj-art">Art Portfolio</a>
+                        <a href="index.html#proj-python">Python TFD</a>
+                        <a href="index.html#interest">Interest</a>
+                        <a href="info.html">Info</a>
+                        <a href="">Resume</a>
+                        <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                        <a href="https://github.com/anly002">GitHub</a>
+                    </div>
+                </div>
+            </nav>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="dropdown">
+                    <button class="menu-trigger" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="darkgray" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <ul class="menu" role="menu">
+                        <li role="none"><a role="menuitem" href="index.html#proj-art">Art Portfolio</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#proj-python">Python TFD</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#interest">Interest</a></li>
+                    </ul>
+                </div>
+                <a href="info.html">Info</a>
+            </nav>
+            <nav class="social-nav" aria-label="External">
+                <a href="">Resume</a>
+                <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                <a href="https://github.com/anly002">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="container">
+            <div class="hero-wrap">
+                <div class="hero-left-grid">
+                    <img class="hero-avatar" src="portraits/IMG_6150.PNG" alt="Anthony Ly">
+                    <div class="hero-text">
+                        <h1 class="hero-title">I'm Anthony,<br>a Full Stack</h1>
+                        <p>This portoflio was fully coded and developed by me and serves as a showcase of my projects</p>
+                    </div>
+                    <a href="info.html" class="btn"><span>About Me <i class="fa-solid fa-arrow-right"></i></span></a>
+                </div>
+                <div class="right-panel">
+                    <div class="bg-blob blob-pink" aria-hidden="true"></div>
+                    <div class="bg-blob blob-cyan" aria-hidden="true"></div>
+                    <div class="timeline">
+                        <a class="node left btn btn-chip" href="#proj-art">Art Portoflio</a>
+                        <a class="node right btn btn-chip" href="#proj-python">Python TFD</a>
+                        <a class="node left btn btn-chip" href="#interest">Interest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="container projects-group-grid">
+            <div class="projects-grid">
+                <div class="proj-main">
+                    <section class="project" id="proj-art">
+                        <header class="project-header">
+                            <h2 class="project-title">Art Portfolio</h2>
+                            <p class="project-subtitle">Developed and coded using HTML, CSS, and JavaScript; showcasing my artworks prior to web development.</p>
+                            <div>
+                                <a href="https://anly002.github.io/art-portfolio/" class="visit-site" target="_blank" rel="noopener">Visit Site <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </header>
+                        <a href="https://anly002.github.io/art-portfolio/" class="project-preview has-cta" target="_blank" rel="noopener">
+                            <video class="project-preview-video" muted loop playsinline preload="auto">
+                                <source src="vids/artprev.mp4" type="video/quicktime">
+                                Your browser does not support the video tag.
+                            </video>
+                            <span class="preview-overlay" aria-hidden="true"></span>
+                            <span class="preview-cta">
+                                Discover<br>the Process<i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="project-inspiration">
+                            <p class="inspiration-intro">
+                                Designed from inspirations and ideas, some are as follows
+                            </p>
+                            <section class="inspirations">
+                                <div class="insp-grid">
+                                    <div class="insp-item">
+                                        <img src="images/liquidglass.jpg" alt="Liquid Glass" class="insp-icon">
+                                        <h3>"Liquid Glass"</h3>
+                                        <p>Couldn't replicate Apple's liquid glass, applied a glassmorphism style instead.</p>
+                                    </div>
+                                    <div class="insp-item">
+                                        <img src="images/slidericon.png" alt="Liquid Glass" class="insp-icon">
+                                        <h3>Image Sliders</h3>
+                                        <p>Artworks are presented with sliders for a smooth, intuitive showcase.</p>
+                                    </div>
+                                    <div class="insp-item">
+                                        <a href="https://github.com/anly002/art-portfolio" target="_blank" rel="noopener" class="insp-icon-link">
+                                            <i class="fa-brands fa-github insp-icon"></i>
+                                        </a>
+                                        <h3>Full Code</h3>
+                                        <p>My first website project, an invaluable learning experience.</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <section class="project" id="proj-python">
+                        <header class="project-header">
+                            <h2 class="project-title">Python TFD</h2>
+                            <p class="project-subtitle">The First Descendant was a game I used to play. I was coding and learning Python at the
+                                time so I thought of an idea to create a Python project to fix an quality of life issue I had with the game.
+                            </p>
+                        </header>
+                            <img class="tfdsocket proj-pyimg" src="images/tfdsocket.jpg" alt="Art Portfolio Preview">
+                    </section>
+                    <section class="project" id="interest">
+                        <header class="project-header">
+                            <h2 class="project-title">My Interest</h2>
+                            <p class="project-subtitle">Over the years, I've developed a deep passion for technology—especially computers.
+                                I've built several PCs and learned a lot along the way. Now, let's take a look at my personal rig and explore the individual components together!
+                            </p>
+                        </header>
+                        <div class="carousel">
+                            <div class="list">
+                                <div class="item">
+                                    <img src="images/pc.PNG" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">Final Build</div>
+                                        <div class="des">Trust me, it looks even better in person.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">Daki</div>
+                                        <div class="des">Totaling around $3,000 USD.</div>
+                                        <div class="specifications">
+                                            <div><a href="https://pcpartpicker.com/list/MnNx3w" class="visit-site" target="_blank" rel="noopener">Build<i class="fa-solid fa-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/cpu.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">CPU</div>
+                                        <div class="des">Central Processing Unit; the brain of your computer.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">Intel i9-13900KF</div>
+                                        <div class="des">The CPU handles all the calculations behind what you do. Three key parts to know are cores,
+                                            threads, and clock speed: cores act like workstations, threads are the workers at each station, and clock speed is how fast they work.
+                                        </div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Cores</p>
+                                                <p>24 Cores</p>
+                                            </div>
+                                            <div>
+                                                <p>Threads</p>
+                                                <p>32 Threads</p>
+                                            </div>
+                                            <div>
+                                                <p>Clock Speed</p>
+                                                <p>5.8 GHz</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>Intel</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/gpu.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">GPU</div>
+                                        <div class="des">Graphics Processing Unit; the visuals.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">RTX 4070 Ti Super</div>
+                                        <div class="des">The GPU handles the heavy calculations needed to render every pixel on your screen.
+                                            Beyond graphics, it's also used for tasks like AI, scientific computing, and crypto mining.
+                                        </div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Video Memory</p>
+                                                <p>16 GB</p>
+                                            </div>
+                                            <div>
+                                                <p>Clock Speed</p>
+                                                <p>2670 MHz</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>NVIDIA</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/motherboard.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">Motherboard</div>
+                                        <div class="des">The nervous system.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">N7 Z790</div>
+                                        <div class="des">The motherboard connects all the components so they can work together—like a
+                                            company's management system that keeps every department in sync.</div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Memory Support</p>
+                                                <p>DDR5</p>
+                                            </div>
+                                            <div>
+                                                <p>Chipset</p>
+                                                <p>Z790</p>
+                                            </div>
+                                            <div>
+                                                <p>Form Factor</p>
+                                                <p>ATX</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>NZXT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/ram.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">RAM</div>
+                                        <div class="des">Random Access Memory; the workstation.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">Dominator Titanium</div>
+                                        <div class="des">RAM is your PC's temporary memory—it stores data only while powered. Key factors are size (amount it holds), speed (how fast it moves data), and CAS latency (the delay before access-lower, the better).
+                                        </div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Memory Size</p>
+                                                <p>64GB (4 x 16GB)</p>
+                                            </div>
+                                            <div>
+                                                <p>Speed</p>
+                                                <p>DDR5 - 6000 mHz</p>
+                                            </div>
+                                            <div>
+                                                <p>CL</p>
+                                                <p>30</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>Corsair</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/ssd.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">SSD</div>
+                                        <div class="des">Solid State Drive; the storage.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">Samsung 980 Pro</div>
+                                        <div class="des">Keeps all your files and your operating system, and unlike RAM, it doesn't lose data when the power is off.</div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Form Factor</p>
+                                                <p>M.2</p>
+                                            </div>
+                                            <div>
+                                                <p>Storage</p>
+                                                <p>2 TB</p>
+                                            </div>
+                                            <div>
+                                                <p>Read/Write Speed</p>
+                                                <p>7000 MB/s<br>5100 MB/s</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>Samsung</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/aio.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">AIO</div>
+                                        <div class="des">"All In One" or radiator; the cooler for your CPU.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">Kraken Elite 360</div>
+                                        <div class="des">The cooler keeps your CPU from overheating, either with air or liquid. Both work fine—just don't cheap out on quality.
+                                        </div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Size</p>
+                                                <p>360mm</p>
+                                            </div>
+                                            <div>
+                                                <p>Type</p>
+                                                <p>Liquid</p>
+                                            </div>
+                                            <div>
+                                                <p>RPM</p>
+                                                <p>500-1800</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>NZXT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/fans.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">Case Fans</div>
+                                        <div class="des">Pretty self explanatory.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">TL 120</div>
+                                        <div class="des">Keeps your PC cool by bringing in fresh air and pushing out hot air.</div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Speed</p>
+                                                <p>200-2600</p>
+                                            </div>
+                                            <div>
+                                                <p>Noise</p>
+                                                <p>33 dB</p>
+                                            </div>
+                                            <div>
+                                                <p>Size</p>
+                                                <p>120mm</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>Lian Li</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/psu.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">PSU</div>
+                                        <div class="des">Power Supply; The heart of your computer.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">ROG Strix 850G</div>
+                                        <div class="des">The PSU supplies power to your entire PC—never cheap out, especially if you're running high-end parts.
+                                        </div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Wattage</p>
+                                                <p>850 W</p>
+                                            </div>
+                                            <div>
+                                                <p>Form Factor</p>
+                                                <p>ATX</p>
+                                            </div>
+                                            <div>
+                                                <p>Modular</p>
+                                                <p>Fully Modular</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>Asus</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img src="images/case.png" alt="">
+                                    <div class="introduce">
+                                        <div class="topic">Case</div>
+                                        <div class="des">The housing.</div>
+                                        <button class="seeMore">Details <i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="title">H9 Elite</div>
+                                        <div class="des">Just holds everything together.</div>
+                                        <div class="specifications">
+                                            <div>
+                                                <p>Form Factor</p>
+                                                <p>ATX</p>
+                                            </div>
+                                            <div>
+                                                <p>Height</p>
+                                                <p>495mm</p>
+                                            </div>
+                                            <div>
+                                                <p>Width</p>
+                                                <p>290mm</p>
+                                            </div>
+                                            <div>
+                                                <p>Brand</p>
+                                                <p>NZXT</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="arrows">
+                                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="back">Back</button>
+                                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <aside class="proj-aside" aria-label="Projects progress">
+                    <div class="scroll-slider">
+                        <div class="slider-track"></div>
+                        <div class="slider-thumb" aria-hidden="true"></div>
+                        <ol class="slider-stops">
+                            <li><a href="#proj-art">Art Portfolio</a></li>
+                            <li><a href="#proj-python">Python TFD</a></li>
+                            <li><a href="#interest">Interest</a></li>
+                        </ol>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" id="contact">
+        <div class="container footer-main">
+            <div class="footer-left">
+                <div class="footer-visual-wrap">
+                    <img src="images/casefan.png" alt="PC case fan" class="footer-visual">
+                    <img src="images/casefan.png" alt="" class="fan-spin" aria-hidden="true">
+                    <div class="fan-center"></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="bg-blob blob-pink" aria-hidden="true"></div>
+                <div class="bg-blob blob-cyan" aria-hidden="true"></div>
+                <h1 class="footer-title">Let's Spin<br>Together!</h1>
+                <a href="mailto:anthonyly42@gmail.com" class="btn-email"><span>Email <i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copy">Copyright © <span id="year"></span> Anthony Ly. All rights reserved.</p>
+            <nav class="footer-social" aria-label="Social links">
+                <a href="http://linkedin.com/in/anyly" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/anly002" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_an_yly?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
