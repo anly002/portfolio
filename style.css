@@ -1480,47 +1480,53 @@ body.menu-open{
     stroke-width: 3;
     stroke-linecap: round;
 }
-.node{
+.tl-node{
     position: absolute;
     z-index: 2;
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     text-decoration: none;
     outline: none;
+    transform: none;
 }
-.node-dot{
+.tl-dot{
     width: 16px;
     height: 16px;
     border-radius: 50%;
 }
-.node-start .node-dot, .node-end .node-dot{
+.tl-start .tl-dot{
     background: var(--white);
 }
-.tooltip{
+.tl-end .tl-dot{
+    background: var(--white);
+}
+.tl-tooltip{
     position: absolute;
-    bottom: 20px;
+    bottom: 28px;
     left: 50%;
     transform: translateX(-50%) translateY(6px);
     padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 0.85rem;
+    border-radius: 40px;
+    font-size: 1rem;
     white-space: nowrap;
-    color: var(--fade-white);
+    color: var(--fade-black);
+    background: var(--fade-white);
     opacity: 0;
     pointer-events: none;
     transition: opacity 160ms ease, transform 160ms ease;
 }
-.node:hover .tooltip, .node:focus-visible .tooltip{
+.tl-node:hover .tl-tooltip, .tl-node:focus-visible .tl-tooltip{
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-.node-start{
+.tl-start{
     left: 8px;
-    top: 68px;
+    top: 74px;
 }
-.node-end{
+.tl-end{
     right: 8px;
-    top: 68px;
+    top: 73px;
 }
 .info-main{
     position: relative;
@@ -1603,6 +1609,14 @@ body.menu-open{
     }
     .snake{
         height: 140px;
+    }
+    .tl-start{
+    left: 8px;
+    top: 60px;
+    }
+    .tl-end{
+        right: 8px;
+        top: 59px;
     }
     .info-grid{
         grid-template-columns: 1fr;
