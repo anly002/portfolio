@@ -52,6 +52,10 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     scroll-margin-top: 79px;
 }
 
+html, body{
+    overflow-x: hidden;
+}
+
 /* header */
 
 
@@ -1612,12 +1616,12 @@ body.menu-open{
         height: 140px;
     }
     .tl-start{
-    left: 8px;
-    top: 60px;
+        left: 8px;
+        top: 60px;
     }
     .tl-end{
         right: 8px;
-        top: 59px;
+        top: 58px;
     }
     .info-grid{
         grid-template-columns: 1fr;
