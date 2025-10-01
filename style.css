@@ -52,8 +52,15 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     scroll-margin-top: 79px;
 }
 
-html, body{
-    overflow-x: hidden;
+@supports (overflow-x: clip){
+    body.info{
+        overflow-x: clip;
+    }
+}
+@supports not (overflow-x: clip){
+    body.info{
+        overflow-x: hidden;
+    }
 }
 
 /* header */
@@ -1503,6 +1510,9 @@ body.menu-open{
 .tl-start .tl-dot{
     background: var(--white);
 }
+.tl-mid .tl-dot{
+    background: var(--white);
+}
 .tl-end .tl-dot{
     background: var(--white);
 }
@@ -1528,6 +1538,11 @@ body.menu-open{
 .tl-start{
     left: 8px;
     top: 74px;
+}
+.tl-mid{
+    left: 50%;
+    top: 71px;
+    transform: translateX(-50%);
 }
 .tl-end{
     right: 8px;
@@ -1619,6 +1634,11 @@ body.menu-open{
         left: 8px;
         top: 60px;
     }
+    .tl-mid{
+        left: 50%;
+        top: 63px;
+        transform: translateX(-50%);
+    }
     .tl-end{
         right: 8px;
         top: 58px;
@@ -1626,13 +1646,13 @@ body.menu-open{
     .info-grid{
         grid-template-columns: 1fr;
     }
-    #info-art .info-grid{
+    #info-art .info-grid, #info-web .info-grid{
         grid-template-areas: "copy" "media";
     }
-    #info-art .info-copy{
+    #info-art .info-copy, #info-web .info-copy{
         grid-area: copy;
     }
-    #info-art .info-media{
+    #info-art .info-media, #info-web .info-media{
         grid-area: media;
     }
     #info-art .info-media::after{
