@@ -1569,7 +1569,6 @@ body.menu-open{
     border-radius: 16px;
     overflow: visible;
     isolation: isolate;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 .info-view, .info-image{
     display: block;
