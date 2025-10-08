@@ -8,51 +8,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <body class="art">
-        <header class="site-header">
-            <div class="container header-inner">
-                <a class="brand" href="index.html">
-                    <img class="logo" src="portraits/mainsubject.png" alt="Anthony Ly">
-                    <span class="brand-name">Anthony Ly</span>
-                </a>
-                <i class="fa-solid fa-bars" id="menuBtn" aria-label="Open menu" aria-expanded="false"></i>
-                <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
-                    <div class="mobile-menu-inner">
-                        <div class="mobile-group">
-                            <a href="index.html#proj-art">Art Portfolio</a>
-                            <a href="index.html#proj-python">Python TFD</a>
-                            <a href="index.html#interest">Interest</a>
-                            <a href="info.html">Info</a>
-                            <a href="https://drive.google.com/file/d/1ZyzCz7n73BIR3x2Zd5idel8oNbO7n-pk/view?usp=sharing">Resume</a>
-                            <a href="http://linkedin.com/in/anyly">LinkedIn</a>
-                            <a href="https://github.com/anly002">GitHub</a>
-                        </div>
+<body class="art">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img class="logo" src="portraits/mainsubject.png" alt="Anthony Ly">
+                <span class="brand-name">Anthony Ly</span>
+            </a>
+            <i class="fa-solid fa-bars" id="menuBtn" aria-label="Open menu" aria-expanded="false"></i>
+            <nav id="mobile-menu" class="mobile-menu" aria-hidden="true">
+                <div class="mobile-menu-inner">
+                    <div class="mobile-group">
+                        <a href="index.html#proj-art">Art Portfolio</a>
+                        <a href="index.html#proj-python">Python TFD</a>
+                        <a href="index.html#interest">Interest</a>
+                        <a href="info.html">Info</a>
+                        <a href="https://drive.google.com/file/d/1ZyzCz7n73BIR3x2Zd5idel8oNbO7n-pk/view?usp=sharing">Resume</a>
+                        <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                        <a href="https://github.com/anly002">GitHub</a>
                     </div>
-                </nav>
-                <nav class="primary-nav" aria-label="Primary">
-                    <div class="dropdown">
-                        <button class="menu-trigger" aria-haspopup="true" aria-expanded="false">
-                        Projects
-                            <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M6 9l6 6 6-6" fill="none" stroke="darkgray" stroke-width="2"/>
-                            </svg>
-                        </button>
-                        <ul class="menu" role="menu">
-                            <li role="none"><a role="menuitem" href="index.html#proj-art">Art Portfolio</a></li>
-                            <li role="none"><a role="menuitem" href="index.html#proj-python">Python TFD</a></li>
-                            <li role="none"><a role="menuitem" href="index.html#interest">Interest</a></li>
-                        </ul>
-                    </div>
-                    <a href="info.html">Info</a>
-                </nav>
-                <nav class="social-nav" aria-label="External">
-                    <a href="https://drive.google.com/file/d/1ZyzCz7n73BIR3x2Zd5idel8oNbO7n-pk/view?usp=sharing">Resume</a>
-                    <a href="http://linkedin.com/in/anyly">LinkedIn</a>
-                    <a href="https://github.com/anly002">GitHub</a>
-                </nav>
+                </div>
+            </nav>
+            <nav class="primary-nav" aria-label="Primary">
+                <div class="dropdown">
+                    <button class="menu-trigger" aria-haspopup="true" aria-expanded="false">
+                    Projects
+                        <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6 9l6 6 6-6" fill="none" stroke="darkgray" stroke-width="2"/>
+                        </svg>
+                    </button>
+                    <ul class="menu" role="menu">
+                        <li role="none"><a role="menuitem" href="index.html#proj-art">Art Portfolio</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#proj-python">Python TFD</a></li>
+                        <li role="none"><a role="menuitem" href="index.html#interest">Interest</a></li>
+                    </ul>
+                </div>
+                <a href="info.html">Info</a>
+            </nav>
+            <nav class="social-nav" aria-label="External">
+                <a href="https://drive.google.com/file/d/1ZyzCz7n73BIR3x2Zd5idel8oNbO7n-pk/view?usp=sharing">Resume</a>
+                <a href="http://linkedin.com/in/anyly">LinkedIn</a>
+                <a href="https://github.com/anly002">GitHub</a>
+            </nav>
+        </div>
+    </header>
+    <section class="art-hero">
+        <div class="container art-hero-grid">
+            <div class="art-hero-copy">
+                <h1 class="project-title">Art portfolio</h1>
+                <p class="hero-subtext">
+                    A website created by me as a showcase of my digital art journey.
+                </p>
+                <div class="hero-links">
+                    <a href="" class="btn hero-btn" target="_blank" rel="noopener">Site <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="btn hero-btn" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
-        </header>
-    </body>
+            <div class="art-hero-media">
+                <video src="vids/artprev.mp4" autoplay muted loop playsinline class="art-hero-video"></video>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer" id="contact">
+        <div class="container footer-main">
+            <div class="footer-left">
+                <div class="footer-visual-wrap">
+                    <img src="images/casefan.png" alt="PC case fan" class="footer-visual">
+                    <img src="images/casefan.png" alt="" class="fan-spin" aria-hidden="true">
+                    <div class="fan-center"></div>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="bg-blob blob-pink" aria-hidden="true"></div>
+                <div class="bg-blob blob-cyan" aria-hidden="true"></div>
+                <h1 class="footer-title">Let's Spin<br>Together!</h1>
+                <a href="mailto:anthonyly42@gmail.com" class="btn-email"><span>Email <i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p class="footer-copy">Copyright © <span id="year"></span> Anthony Ly. All rights reserved.</p>
+            <nav class="footer-social" aria-label="Social links">
+                <a href="http://linkedin.com/in/anyly" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/anly002" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/_an_yly?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
