@@ -1684,17 +1684,20 @@ body.menu-open{
 }
 .art-hero .hero-subtext{
     color: var(--fade-black);
-    font-size: clamp(0.95rem, 1.3vw, 1.1rem);
-    max-width: 60ch;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-decoration: none;
 }
 .hero-links{
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 20px;
 }
 .hero-btn {
-  border-radius: 20px;
-  padding: 10px 16px;
+  border-radius: 12px;
+  width: auto;
+  padding: 5px 10px;
   font-weight: 300;
 }
 .art-hero-media{
@@ -1709,6 +1712,7 @@ body.menu-open{
     display: block;
     border-radius: inherit;
 }
+
 @media(max-width: 900px){
     .art-hero-grid{
         grid-template-columns: 1fr;
