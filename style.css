@@ -1712,6 +1712,45 @@ body.menu-open{
     display: block;
     border-radius: inherit;
 }
+.art-info{
+    background: var(--white);
+    color: var(--black);
+    padding: clamp(80px, 12vw, 160px) 0;
+}
+.inspiration-subtext{
+    color: var(--fade-black);
+    font-size: clamp(1.45rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.inspiration-subtext::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background: var(--fade-black);
+    opacity: 0.4;
+    border-radius: 10%;
+}
+.art-inspiration-media{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    align-items: center;
+    padding-top: 50px;
+}
+.art-inspiration-img{
+    width: 80%;
+    height: auto;
+    border-radius: 7%;
+}
 
 @media(max-width: 900px){
     .art-hero-grid{
