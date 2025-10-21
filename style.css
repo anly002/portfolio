@@ -42,6 +42,8 @@
     --item5-filter: blur(40px);
     --item5-zIndex: 7;
     --item5-opacity: 0;
+
+    --carousel-depth: clamp(324px, 40vw, 480px);
 }
 
 html{
@@ -1769,6 +1771,177 @@ body.menu-open{
     width: 300px;
     height: auto;
     border-radius: 7%;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: clamp(160px, 18vw, 200px);
+    height: clamp(200px, 22vw, 250px);
+    bottom: calc(62% - (500px - var(--carousel-depth)) * 0.1);
+    left: 50%;
+    --ry: 0deg;
+    transform-style: preserve-3d;
+    transform: translateX(-50%) perspective(1000px) rotateX(-10deg) rotateY(var(--ry));
+    will-change: transform;
+    user-select: none;
+}
+.banner .slider:active{
+    cursor: grabbing;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(360deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-10deg) rotateY(0deg);
+    }
+}
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:
+        rotateY(calc((var(--position) - 1) * (360/var(--quantity)) * 1deg))
+        translateZ(var(--carousel-depth));
+    opacity: 0.8;
+    filter: blur(0.2px);
+}
+.banner, .full-viewport{
+    min-height: 100svh;
+}
+@supports (height: 100dvh){
+    .banner, full-viewport{
+        min-height: 100dvh;
+    }
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.slider2{
+    position: relative;
+    left: 50%;
+    bottom: calc(env(safe-area-inset-bottom) + 16px);
+    transform: translateX(-50%);
+    width: auto;
+    overflow-x: auto;
+    padding-inline: clamp(1rem, 4vw, 75px);
+    z-index: 900;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.055);
+    border-top: 2.1px solid rgba(225, 225, 225, 0.4);
+    border-left: 1.3px solid rgba(225, 225, 225, 0.3);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+    border-radius: 5rem;
+}
+.slider2.grabbing{
+    cursor: grabbing;
+}
+.slider2::-webkit-scrollbar{
+    width: 0;
+}
+.title{
+    padding: 20px 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.05rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.246);
+}
+.slider2 .form{
+    width: max-content;
+    --left: 0;
+    transform: translateX(var(--left));
+}
+.form .item2{
+    width: 150px;
+    height: 240px;
+    display: inline-block;
+    margin-right: 20px;
+    transform: perspective(10px);
+    transform-style: preserve-3d;
+}
+.slider2 .form .item2 .content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s;
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+    opacity: 0.3;
+    filter: blur(2.5px);
+}
+.slider2 .form .item2 .content:hover{
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    opacity: 1;
+    filter: blur(0);
+}
+.lightbox{
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.lightbox.open{
+    display: flex;
+}
+.lightbox-backdrop{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    backdrop-filter: blur(5px);
+}
+.lightbox-img{
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 20px 40px rgba(0, 0, 0 .35);
+    z-index: 1;
+}
+.slider2 .form .item2 .content .des{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(84, 24, 134, 0.392);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.05rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.246);
+}
+.slider2 .form .item2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider2 .form.left .item2 .content{
+    transform: rotateY(-1deg) scale(0.8);
+}
+.slider2 .form.right .item2 .content{
+    transform: rotateY(1deg) scale(0.8);
 }
 
 @media(max-width: 900px){
