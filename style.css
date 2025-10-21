@@ -194,6 +194,11 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
   transition: 300ms ease;
   color: var(--white);
 }
+
+
+/* mobile menu dropdown */
+
+
 .mobile-menu{
     position: absolute;
     top: 100%;
@@ -233,10 +238,24 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     cursor: pointer;
     transition: color 500ms ease;
 }
-.mobile-group{
-    display: flex;
-    flex-direction: column;
+.mobile-group a{
+    display: block;
+    position: relative;
+    padding: 20px;
     color: var(--white);
+    text-decoration: none;
+}
+.mobile-group a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 225px;
+    bottom: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
+}
+.mobile-group a:last-child::after{
+    display: none;
 }
 body.menu-open{
     overflow: hidden;
