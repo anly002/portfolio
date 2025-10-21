@@ -1732,7 +1732,7 @@ body.menu-open{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100px;
+    width: clamp(2rem, 4vw, 4rem);
     height: 2px;
     background: var(--fade-black);
     opacity: 0.4;
@@ -1747,7 +1747,7 @@ body.menu-open{
     padding-top: 50px;
 }
 .art-inspiration-img{
-    width: 80%;
+    width: 300px;
     height: auto;
     border-radius: 7%;
 }
@@ -1762,5 +1762,8 @@ body.menu-open{
     }
     .art-hero-media{
         margin-top: 30px;
+    }
+    .art-inspiration-media{
+        grid-template-columns: 1fr;
     }
 }
