@@ -1688,8 +1688,7 @@ body.menu-open{
 /* art page */
 
 .art-hero{
-    background: var(--white);
-    color: var(--black);
+    background: var(--fade-white);
     padding: clamp(80px, 12vw, 160px) 0;
 }
 .art-hero-grid{
@@ -1738,17 +1737,26 @@ body.menu-open{
     color: var(--black);
     padding: clamp(80px, 12vw, 160px) 0;
 }
-.inspiration-subtext{
+.art-inspiration-text{
     color: var(--fade-black);
     font-size: clamp(1.45rem, 3vw, 2.5rem);
     font-weight: 300;
     letter-spacing: 0.5px;
     text-decoration: none;
     position: relative;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding: 50px 0px;
 }
-.inspiration-subtext::after{
+.art-inspiration-text .line{
+    display: block;
+    opacity: 0.2;
+    transition: opacity 520ms cubic-bezier(.2,.8,.2,1) var(--delay, 0ms), transform 520ms cubic-bezier(.2,.8,.2,1) var(--delay, 0ms);
+}
+.art-inspiration-text.show .line{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.art-inspiration-text::after{
     content: "";
     position: absolute;
     left: 0;
@@ -1756,8 +1764,15 @@ body.menu-open{
     width: clamp(2rem, 4vw, 4rem);
     height: 2px;
     background: var(--fade-black);
-    opacity: 0.4;
+    opacity: 0;
     border-radius: 10%;
+    transform-origin: left center;
+    transform: translateY(4px) scaleX(0.85);
+    transition: opacity 420ms cubic-bezier(.2,.8,.2,1) var(--after-delay, 0ms),
+                transform 420ms cubic-bezier(.2,.8,.2,1) var(--after-delay, 0ms);
+}
+.art-inspiration-text.show::after{
+    opacity: 0.4;
 }
 .art-inspiration-media{
     position: relative;
@@ -1765,12 +1780,19 @@ body.menu-open{
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
     align-items: center;
-    padding-top: 50px;
+    gap: 30px; 
+    padding: 30px;
 }
 .art-inspiration-img{
-    width: 300px;
-    height: auto;
-    border-radius: 7%;
+    display: block;
+    width: min(100%, 400px);
+    height: min(100%, 400px);
+    border-radius: 12px;
+    background: var(--white);
+    box-shadow: 1px 2px 20px rgba(101, 240, 201, 0.511);
+    border: solid 1px rgba(101, 240, 201);
+    padding: 20px;
+    object-fit: contain;
 }
 .banner{
     width: 100%;
@@ -1833,7 +1855,6 @@ body.menu-open{
     width: auto;
     overflow-x: auto;
     padding-inline: clamp(1rem, 4vw, 75px);
-    z-index: 900;
     box-sizing: border-box;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.055);
@@ -1847,15 +1868,6 @@ body.menu-open{
 }
 .slider2::-webkit-scrollbar{
     width: 0;
-}
-.title{
-    padding: 20px 0;
-    font-size: 1.7rem;
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: 0.05rem;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.246);
 }
 .slider2 .form{
     width: max-content;
@@ -1929,7 +1941,7 @@ body.menu-open{
     font-weight: 600;
     line-height: 1.1;
     letter-spacing: 0.05rem;
-    color: var(--primary-color);
+    color: var(--fade-white);
     text-shadow: 2px 2px 3px rgba(97, 97, 97, 0.246);
 }
 .slider2 .form .item2 img{
@@ -1957,5 +1969,8 @@ body.menu-open{
     }
     .art-inspiration-media{
         grid-template-columns: 1fr;
+    }
+    .art-inspiration-img{
+        box-shadow: 1px 2px 12px rgba(101, 240, 201, 0.511);
     }
 }
