@@ -1688,8 +1688,30 @@ body.menu-open{
 /* art page */
 
 .art-hero{
-    background: var(--fade-white);
+    position: relative;
     padding: clamp(80px, 12vw, 160px) 0;
+    overflow: hidden;
+}
+.art-hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(artworks/100825.jpg) center/cover no-repeat;
+    filter: blur(3px);
+    transform: scale(1.06);
+    z-index: 0;
+    pointer-events: none;
+}
+.art-hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6));
+    z-index: 0;
+}
+.art-hero > *{
+    position: relative;
+    z-index: 1;
 }
 .art-hero-grid{
     display: grid;
@@ -1703,7 +1725,7 @@ body.menu-open{
     gap: 20px;
 }
 .art-hero .hero-subtext{
-    color: var(--fade-black);
+    color: var(--fade-white);
     font-size: clamp(0.9rem, 1.2vw, 1.05rem);
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -1713,6 +1735,12 @@ body.menu-open{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+.hero-links .btn{
+    color: var(--white);
+}
+.hero-links .fa-solid{
+    color: var(--white);
 }
 .hero-btn {
   border-radius: 12px;
@@ -1724,6 +1752,7 @@ body.menu-open{
     position: relative;
     border-radius: 16px;
     overflow: hidden;
+    padding: 30px;
 }
 .art-hero-video{
     width: 100%;
@@ -1731,6 +1760,9 @@ body.menu-open{
     object-fit: cover;
     display: block;
     border-radius: inherit;
+    box-shadow: 0px 3px 16px rgba(228, 101, 240, 0.335);
+    border: solid 1px rgba(228, 101, 240);
+    opacity: 0.9;
 }
 .art-info{
     background: var(--white);
@@ -1746,14 +1778,6 @@ body.menu-open{
     position: relative;
     padding: 50px 0px;
 }
-.art-inspiration-text .line{
-    display: block;
-    opacity: 0.2;
-    transition: opacity 1200ms cubic-bezier(.2,.8,.2,1) var(--delay, 0ms), transform 520ms cubic-bezier(.2,.8,.2,1) var(--delay, 0ms);
-}
-.art-inspiration-text.show .line{
-    opacity: 1;
-}
 .art-inspiration-text::after{
     content: "";
     position: absolute;
@@ -1762,14 +1786,12 @@ body.menu-open{
     width: clamp(2rem, 4vw, 4rem);
     height: 2px;
     background: var(--fade-black);
-    opacity: 0;
     border-radius: 10%;
     transform-origin: left center;
     transition: opacity 420ms cubic-bezier(.2,.8,.2,1) var(--after-delay, 0ms),
                 transform 420ms cubic-bezier(.2,.8,.2,1) var(--after-delay, 0ms);
-}
-.art-inspiration-text.show::after{
-    opacity: 0.4;
+    animation: autoShowAnimation both;
+    animation-timeline: view(40% 30%);
 }
 .art-inspiration-media{
     position: relative;
@@ -1790,6 +1812,19 @@ body.menu-open{
     border: solid 1px rgba(101, 240, 201);
     padding: 20px;
     object-fit: contain;
+}
+.autoShow{
+    animation: autoShowAnimation both;
+    animation-timeline: view(40% 30%);
+}
+@keyframes autoShowAnimation{
+    from{
+        opacity: 0.2;
+        transform: translateY(3px) scale(0.97);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 .banner{
     width: 100%;
