@@ -620,7 +620,6 @@ body.menu-open{
     font-weight: 300;
     letter-spacing: 0.5px;
     text-decoration: none;
-    transition: gap 200ms ease;
 }
 .project-preview{
     position: relative;
@@ -1734,19 +1733,20 @@ body.menu-open{
 .hero-links{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-}
-.hero-links .btn{
-    color: rgba(228, 101, 240)
-}
-.hero-links .fa-solid{
-    color: rgba(228, 101, 240)
+    gap: 50px;
 }
 .hero-btn {
   border-radius: 12px;
+  gap: 6px;
   width: auto;
-  padding: 5px 10px;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   font-weight: 300;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: var(--white);
+}
+.hero-btn:hover{
+    color: rgba(229, 141, 237, 0.735);
 }
 .art-hero-media{
     position: relative;
