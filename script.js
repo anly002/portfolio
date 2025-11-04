@@ -67,6 +67,60 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// Setup submenu toggles once DOM is ready (mobileMenu is defined in the DOMContentLoaded scope above)
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!mobileMenu) return;
+
+  const triggers = mobileMenu.querySelectorAll('.submenu-trigger');
+  triggers.forEach(btn => {
+    const panelId = btn.getAttribute('aria-controls');
+    const panel = mobileMenu.querySelector('#' + panelId);
+    if (!panel) return;
+
+    const closeOthers = () => {
+      mobileMenu.querySelectorAll('.submenu').forEach(s => {
+        if (s !== panel) {
+          s.classList.remove('open');
+          s.hidden = true;
+          const t = mobileMenu.querySelector('[aria-controls="' + s.id + '"]');
+          t && t.setAttribute('aria-expanded', 'false');
+        }
+      });
+    };
+
+    const toggleSubmenu = () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        btn.setAttribute('aria-expanded', 'false');
+        panel.classList.remove('open');
+        panel.hidden = true;
+      } else {
+        // close other submenus before opening this one
+        closeOthers();
+        btn.setAttribute('aria-expanded', 'true');
+        panel.hidden = false;
+        // ensure CSS transition can run
+        requestAnimationFrame(() => panel.classList.add('open'));
+      }
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleSubmenu();
+    });
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleSubmenu();
+      }
+    });
+  });
+});
+
+
+
 // button glow
 
 
