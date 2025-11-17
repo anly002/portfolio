@@ -69,13 +69,13 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
 
 
 .site-header{
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
     overflow: visible;
-    background: var(--black);
+    background: #0e0e0eca;
 }
 .site-header a{
     text-decoration: none;
@@ -208,9 +208,8 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     right: 0;
     max-height: 0;
     overflow: hidden;
-    background: var(--black);
-    color: var(--white);
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.34);
+    background: #0e0e0eca;
+    backdrop-filter: blur(3px);
     z-index: 1000;
     transition: max-height 500ms ease-in-out;
 }
@@ -225,7 +224,6 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
 }
 .mobile-menu a{
     padding: 20px;
-    color: var(--white);
     font-size: clamp(0.9rem, 1.2vw, 0.9rem);
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -251,7 +249,7 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     content: "";
     position: absolute;
     left: 0;
-    right: 225px;
+    right: 100px;
     bottom: 0;
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
@@ -267,27 +265,35 @@ body.menu-open{
     display: none;
     cursor: pointer;
 }
-.submenu-trigger{
-    font-size: clamp(0.9rem, 1.2vw, 0.9rem);
-    font-weight: 300;
-    letter-spacing: 0.5px;
+.mobile-group .submenu-trigger{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    position: relative;
     background: transparent;
-    border: 0;
     color: var(--white);
     font: inherit;
     cursor: pointer;
+    border: 0;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
-.mobile-group a::after, .mobile-group .submenu-trigger::after{
+.mobile-group .submenu-trigger::after{
     content: "";
     position: absolute;
     left: 0;
-    right: 0;
+    right: 100px;
     bottom: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
 }
-.mobile-group a:last-child::after{
-    display: none;
+.submenu-title{
+    font-size: clamp(0.9rem, 1.2vw, 0.9rem);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-decoration: none;
 }
 .caret{
     transition: transform 200ms ease;
@@ -299,7 +305,7 @@ body.menu-open{
     overflow: hidden;
     max-height: 0;
     transition: max-height 320ms ease;
-    padding-left: 12px;
+    padding-left: 30px;
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     margin-left: 8px;
 }
@@ -308,7 +314,7 @@ body.menu-open{
 }
 .submenu a{
     display: block;
-    padding: 14px 20px;
+    padding: 20px 0px;
     color: var(--white);
     text-decoration: none;
     font-weight: 300;
@@ -317,17 +323,8 @@ body.menu-open{
 .submenu a:hover{
     color: rgba(229, 141, 237, 0.735);
 }
-.submenu a::after{
-    content: "";
-    position: absolute;
-    left: 12px;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
-}
 .submenu a:last-child::after{
-    display: none;
+    display: block;
 }
 
 @media(max-width: 950px){
