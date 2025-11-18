@@ -211,7 +211,7 @@ body.index #proj-art, body.index #proj-python, body.index #interest{
     background: #0e0e0eca;
     backdrop-filter: blur(3px);
     z-index: 1000;
-    transition: max-height 500ms ease-in-out;
+    transition: max-height 200ms ease;
 }
 .mobile-menu.open{
     max-height: 100vh;
